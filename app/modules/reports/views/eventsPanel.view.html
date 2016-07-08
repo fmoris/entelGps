@@ -1,0 +1,38 @@
+<table ng-table="tableParams" class="table table-condensed table-bordered table-hover">
+    <tr ng-repeat="row in $data">
+        <td data-title="'commons.tables.datePetition' | translate">{{row.name}}</td>
+        <td data-title="'commons.tables.file' | translate">{{row.createDate}}</td>
+        <td data-title="'commons.tables.username' | translate">{{row.createDate}}</td>
+        <td data-title="'commons.tables.state' | translate">
+            <a ng-if="row.status == 0">
+                <md-icon class="material-icons-success">
+                    done
+                </md-icon>
+            </a>
+            <a ng-if="row.status != 0">
+                <md-icon class="material-icons-danger" >
+                    error
+                </md-icon>
+            </a>
+        </td>
+        <td data-title="'commons.tables.download' | translate">
+            <a ng-if="row.status == 0" ng-click="downloadReport(row)">
+                <md-icon class="material-icons-success click-icon">
+                    file_download
+                </md-icon>
+            </a>
+            <a ng-if="row.status != 0">
+                <md-icon class="material-icons-danger">
+                    file_download
+                </md-icon>
+            </a>
+        </td>
+        <td data-title="'commons.tables.sendEmail' | translate">
+            <a ng-if="row.status == 0" ng-click="sendReport(row)">
+                <md-icon class="material-icons-warning click-icon">
+                    send
+                </md-icon>
+            </a>
+        </td>
+    </tr>
+</table>

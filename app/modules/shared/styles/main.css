@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'EntelFontRegular';
+  src: url('../../fonts/Roboto-Regular.ttf')  format('truetype');
+}
+@font-face {
+  font-family: 'EntelFontLight';
+  src: url('../../fonts/Roboto-Light.ttf')  format('truetype');
+}
+
+body  {
+    font-family: 'Roboto',Trebuchet MS, Arial, Helvetica, sans-serif;
+}
+h1{
+    margin-top: 0;
+}
+a:hover, a:focus {
+	text-decoration: none;
+}

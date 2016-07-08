@@ -1,0 +1,59 @@
+<div class="container" ng-controller="AboutCtrl as aCtrl">
+    <table ng-table="bsCtrl.tableParams" class="table table-condensed table-striped table-bordered table-hover table-responsive" show-filter="true">
+        <tr ng-repeat="user in $data">
+            <td title="'Estado'" sortable="'estado'" style="width: 5%">
+                <i class="material-icons">{{user.estado}}</i>
+            </td>
+            <td title="'Nombre'" filter="{ nombre: 'text'}" sortable="'nombre'" style="width: 8%">
+                {{user.nombre}}
+            </td>
+            <td title="'Patente'" filter="{ patente: 'text'}" sortable="'patente'" style="width: 8%">
+                {{user.patente}}
+            </td>
+            <td title="'Fecha Ultima Actividad'" sortable="'ultimaActualizalizacion'">
+                {{user.ultimaActualizalizacion}}
+            </td>
+            <td title="'Geolocalizacion'" sortable="'geolocalizacion'">
+                {{user.ubicacion}}
+            </td>
+            <td title="'Velocidad'" filter="{ velocidad: 'number'}" sortable="'velocidad'" style="width: 5%">
+                {{user.velocidad}} Km/h
+            </td>
+            <td title="'Ultimo Evento'" sortable="'age'">
+                {{user.ultimoEvento}}
+            </td>
+            <td title="'Opciones'">
+                <a href="#" ng-click="centrarMovil(user.geolocalizacion.lat,user.geolocalizacion.lon);">
+                    <md-tooltip md-direction="top">
+                        Ver en Mapa {{user.geolocalizacion.lat}} , {{user.geolocalizacion.lat}}
+                    </md-tooltip>
+                    <i class="material-icons">map</i>
+                </a>
+                <a href="#">
+                    <md-tooltip md-direction="top">
+                        Ver Informacion
+                    </md-tooltip>
+                    <i class="material-icons">info</i>
+                </a>
+                <a href="#">
+                    <md-tooltip md-direction="top">
+                        Ver Eventos
+                    </md-tooltip>
+                    <i class="material-icons">event</i>
+                </a>
+                <a href="#">
+                    <md-tooltip md-direction="top">
+                        Ver Reportes
+                    </md-tooltip>
+                    <i class="material-icons">insert_chart</i>
+                </a>
+                <a href="#">
+                    <md-tooltip md-direction="top">
+                        Descargar Certificado
+                    </md-tooltip>
+                    <i class="material-icons">file_download</i>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>

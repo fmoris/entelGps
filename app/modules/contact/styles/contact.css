@@ -1,0 +1,7 @@
+#parrafoContact {
+    border-bottom: 1px solid lightgray;
+}
+#contactButtons {
+    float: right;
+    margin-right: 2%;
+}

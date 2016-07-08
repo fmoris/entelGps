@@ -1,0 +1,31 @@
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+          <span>Administración de flotas</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-fab md-default md-mini" aria-label="Exportar a Excel">
+            <md-tooltip md-direction="top">
+                Nuevo
+            </md-tooltip>
+            <md-icon class="material-icons">add_circle</md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<div class="table-responsive">
+    <table ng-table-dynamic="tableParams with cols" class="table table-condensed table-bordered table-striped">
+        <tr ng-repeat="row in $data">
+            <td ng-repeat="col in $columns">
+                <span ng-if="col.dataType !== 'acciones'">{{row[col.field]}}</span>
+                <a ng-if="col.dataType === 'acciones'" href="" ng-click="showAdvanced($event, user)">
+                    <md-tooltip md-direction="top">
+                        Editar
+                    </md-tooltip>
+                    <i class="material-icons">edit</i>
+                </a>
+            </td>
+
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,67 @@
+<md-dialog aria-label="Editar Movil" ng-controller="FleetsPanelCtrl"  ng-cloak>
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Editar Movil</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <i class="material-icons" aria-label="Close dialog">close</i>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <h2>Editar a {{usuario.nombre}}</h2>
+        <form>
+             <div layout-gt-sm="row">
+                <md-input-container>
+                    <label>Nombre</label>
+                    <input type="text" ng-model="usuario.nombre" required>
+                </md-input-container>
+                <md-input-container>
+                    <label>Patente</label>
+                    <input ng-model="usuario.patente" required>
+                </md-input-container>
+                <md-input-container>
+                    <label>Vin</label>
+                    <input ng-model="usuario.vin" required>
+                </md-input-container>
+            </div>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Tipo Motor</label>
+                    <md-select ng-model="user.state">
+                      <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+                        {{state.abbrev}}
+                      </md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Sub Tipo Movil</label>
+                    <md-select ng-model="user.state">
+                      <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+                        {{state.abbrev}}
+                      </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+            <div>
+                <md-input-container class="md-block">
+                    <label>Texto Libre</label>
+                    <input  ng-model="usuario.textoLibre">
+                </md-input-container>
+            </div>
+        </form>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="answer('not useful')">
+       Cancelar
+      </md-button>
+      <md-button ng-click="answer('useful')" style="margin-right:20px;">
+        Guardar
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

@@ -1,0 +1,35 @@
+.HomeRecuadro{
+    border: 0.2px solid lightgray;
+    height: 221px;
+    margin-bottom: 5px;
+}
+.homeTitulo{
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+}
+.HomeIconoRecuadro  img {
+    float: left;
+    width: 25%;
+    height: auto;
+    display: block;
+}
+.HomeInfoRecuadro{
+    float: none;
+    text-align:left;
+    display: flex;
+}
+.HomeFooterRecuadro {
+    float: left;
+    flex: 1;
+}
+.HomeContent{
+    height: 2%;
+}
+.HomeFooterRecuadro a{
+    font-weight: normal;
+
+}
+.HomeFooterRecuadro a:hover {
+    text-decoration: none;
+    color: #FF8900;
+}

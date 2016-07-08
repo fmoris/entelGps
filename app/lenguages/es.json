@@ -1,0 +1,54 @@
+{
+    "commons" : {
+        "collapseMenu": "Ocultar Menú",
+        "activeMenu" : "Expandir Menú",
+        "sendButton" : "Enviar",
+        "closeButton" : "Cerrar",
+        "tables" : {
+            "name" : "Nombre",
+            "datePetition" : "Fecha de Petición",
+            "file" : "Archivo",
+            "username" : "Nombre de usuario",
+            "state" : "Estado",
+            "download" : "Descarga",
+            "sendEmail" : "Enviar Email"
+        },
+        "sendEmail" : {
+            "title" : "Enviar reporte por email",
+            "addEmail" : "Ingrese los emails:",
+            "badEmail" : "Tienes que ingresar una dirección de correo válida!"
+        }
+    },
+    "login": {
+        "user": "Usuario",
+        "password": "Contraseña",
+        "login": "Ingresar",
+        "required": "Este campo es obligatorio!"
+    },
+    "map": {
+        "title": "Mapa",
+        "sidemenu": {
+            "tooltip": "Menu",
+            "title": "Menu"
+        },
+        "grid": {
+            "tooltip": "Grilla",
+            "title": "Menu de Móviles"
+        },
+        "menu": {
+            "title": "Menu"
+        }
+    },
+    "administration": {
+        "title": "Administración"
+    },
+    "reports" : {
+        "title" : "Reportes",
+        "weeklyPanel" : {
+            "title" : "Cartola Semanal"
+        },
+        "eventsPanel" : {
+            "title" : "Reporte de Eventos"
+        }
+    }
+}

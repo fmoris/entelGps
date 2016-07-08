@@ -1,0 +1,33 @@
+/*Send Email Moda*/
+.modal-toolbar{
+	min-height: 50px !important;
+	background-color: transparent !important;
+	color: var(--main-color) !important;
+	border-bottom: 1px solid var(--main-color);
+}
+.modal-toolbar:not(.md-menu-toolbar) md-icon{
+	color: var(--main-color) !important;
+	font-size: 18px;
+}
+.modal-toolbar > div > .modal-close{
+	color: var(--main-color) !important;
+}
+.send-email-content{
+	min-width:200px;
+	max-width: 500px;
+	max-height:810px;
+}
+.send-email-content > div > h5{
+	font-size: 15px;
+	margin-bottom: 0;
+	margin-left: 15px;
+}
+.send-email-content > div > p{
+	font-size: 13px;
+	margin-bottom: 0;
+	margin-left: 15px;
+	color: var(--danger-color);
+}
+.send-email-content > div > md-chips > md-chips-wrap > div{
+	font-size: 15px;
+}

@@ -1,0 +1,22 @@
+<h1><span class="corchete">[ </span>{{titulo}}</h1>
+
+<div class="HomeRecuadro col-md-4" ng-repeat="menu in menu">
+    <div class="homeTitulo">
+        <h4><span class="corchete">[ </span>{{menu.titulo}}</h4>
+    </div>
+    <div class="HomeInfo">
+        <div class="HomeContent">
+            <div class="HomeIconoRecuadro">
+                <img src="{{menu.icono}}" />
+            </div>
+            <div class="HomeInfoRecuadro">
+                <p>
+                    {{menu.descripcion}}
+                </p>
+            </div>
+        </div>
+        <div class="HomeFooterRecuadro">
+            <a ui-sref="{{menu.link}}">[ Ver más ]</a>
+        </div>
+    </div>
+</div>

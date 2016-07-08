@@ -1,0 +1,66 @@
+<!-- <div class="panel-group" id="accordion">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#paginaInicio">Página de Inicio</a>
+			</h4>
+		</div>
+		<div id="paginaInicio" class="panel-collapse collapse">
+			<a ui-sref="searchMovil.inicio" class="homeBtnMenu"><div class="panel-body">Ubicar Móvil</div></a>
+			<a ui-sref="reports.inicio" class="homeBtnMenu"><div class="panel-body">Reportes</div></a>
+			<a ui-sref="alarms.inicio" class="homeBtnMenu"><div class="panel-body">Alarmas</div></a>
+			<a ui-sref="clientsRoutes.inicio" class="homeBtnMenu"><div class="panel-body">Control de Rutas y Clientes</div></a>
+		</div>
+		<div class="panel-heading">
+				<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#visualizadores">Visualizadores</a>
+				</h4>
+		</div>
+		<div id="visualizadores" class="panel-collapse collapse">
+			<a ui-sref="visualizers.visualizers2" class="homeBtnMenu"><div class="panel-body">Visualizador 2</div></a>
+			<a ui-sref="visualizers.visualizers3" class="homeBtnMenu"><div class="panel-body">Visualizador 3</div></a>
+			<a ui-sref="visualizers.visualizers4" class="homeBtnMenu"><div class="panel-body">Beta Visualiador 4</div></a>
+		</div>
+		<div class="panel-heading">
+				<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#miCuenta">Mi Cuenta</a>
+				</h4>
+		</div>
+		<div id="miCuenta" class="panel-collapse collapse">
+			<a ui-sref="movilAdministrator.inicio" class="homeBtnMenu"><div class="panel-body">Administración de Móviles</div></a>
+			<a ui-sref="usersAdministrator.inicio" class="homeBtnMenu"><div class="panel-body">Administración de Usuarios</div></a>
+			<a ui-sref="inforAdministrator.inicio" class="homeBtnMenu"><div class="panel-body">Administración de Información</div></a>
+		</div>
+		<div class="panel-heading">
+				<h4 class="panel-title">
+						<a data-toggle="collapse" href="#preguntasFrecuentes">Preguntas Frecuentes</a>
+				</h4>
+		</div>
+		<div class="panel-heading">
+				<h4 class="panel-title">
+						<a data-toggle="collapse" href="#ayuda">Ayuda</a>
+				</h4>
+		</div>
+		<div class="panel-heading">
+				<h4 class="panel-title">
+						<a data-toggle="collapse" href="#contactoSoporte">Contacto y Soporte</a>
+				</h4>
+		</div>
+	</div>
+</div> -->
+
+<div ng-controller="menuCtrl">
+	<uib-accordion close-others="true" >
+		<uib-accordion-group is-open="isopen" ng-repeat="item in items">
+			<uib-accordion-heading ng-click="isopen=!isopen">
+			<span ui-sref="{{item.link}}">{{item.name}}</span>			
+				<i ng-if="item.subitems" class="pull-right glyphicon" ng-class="{'glyphicon-chevron-up': isopen, 'glyphicon-chevron-down': !isopen}"></i>
+			</uib-accordion-heading>
+			<div ng-repeat="subitem in item.subitems">
+				<a ui-sref="{{subitem.link}}" panel-class="panel-danger">
+					<div class="">{{subitem.name}}</div>
+				</a>
+			</div>
+		</accordion-group>
+	</uib-accordion>
+</div>

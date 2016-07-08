@@ -1,0 +1,8 @@
+{
+	"login" : {
+		"user" : "User",
+		"password" : "Password",
+		"login" : "Enter",
+		"required" : "This field is obligatory!"
+	}
+}

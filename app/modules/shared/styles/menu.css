@@ -1,0 +1,14 @@
+.panel-default > .panel-heading {
+    color: white;
+    background-color: #0154a0;
+    border-radius: 0px;
+    border-bottom: 2px solid white;
+}
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #ddd;
+    background-color: lightgrey;
+    border-bottom: 1px solid white;
+}
+.homeBtnMenu{
+    background-color: #0154a0;
+}

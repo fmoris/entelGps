@@ -1,0 +1,78 @@
+<script>
+    $(document).ready(function () {
+    //stick in the fixed 100% height behind the navbar but don't wrap it
+    $('#slide-nav.navbar .container').append($('<div id="navbar-height-col"></div>'));
+    // Enter your ids or classes
+    var toggler = '.navbar-toggle';
+    var pagewrapper = '#page-content';
+    var navigationwrapper = '.navbar-header';
+    var menuwidth = '100%'; // the menu inside the slide menu itself
+    var slidewidth = '80%';
+    var menuneg = '-100%';
+    var slideneg = '-80%';
+
+    $("#slide-nav").on("click", toggler, function (e) {
+        var selected = $(this).hasClass('slide-active');
+        $('#slidemenu').stop().animate({
+            left: selected ? menuneg : '0px'
+        });
+        $('#navbar-height-col').stop().animate({
+            left: selected ? slideneg : '0px'
+        });
+        $(pagewrapper).stop().animate({
+            left: selected ? '0px' : slidewidth
+        });
+        $(navigationwrapper).stop().animate({
+            left: selected ? '0px' : slidewidth
+        });
+        $(this).toggleClass('slide-active', !selected);
+        $('#slidemenu').toggleClass('slide-active');
+        $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
+    });
+    var selected = '#slidemenu, #page-content, body, .navbar, .navbar-header';
+    $(window).on("resize", function () {
+        if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {
+            $(selected).removeClass('slide-active');
+        }
+    });
+});
+</script>
+<div class="navbar navbar-inverse" role="navigation" id="slide-nav" ng-controller="NavbarCtrl as nCtrl">
+    <div class="container">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" id="logo" href="#">
+                <img class="imagenLogo" src="../../../images/logo-entel.png"/>
+            </a>
+        </div>
+        <div id="slidemenu" ng-controller="LoginCtrl as lCtrl" ng-show="lCtrl.user.user">
+            <div class="navbar-right navbar-form">
+                <h6 id="nombreUsuario">{{lCtrl.user.user}}</h6>
+                <a href="" id="cerrarSesion" ng-click="logout()">Cerrar Sesion</a>
+            </div>
+            <ul class="nav navbar-nav" id="menu">
+               <li>
+                   <a ui-sref="characteristics">Caracteristicas</a>
+                </li>
+               <li>
+                   <a ui-sref="comercialInfo">Informacion Comercial</a>
+                </li>
+               <li>
+                   <a ui-sref="contact">Fono Compras</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="menuNavbar">
+        <button ui-sref="characteristics" class="btn navCaracteristicas menuOcultar">Características</button>
+        <button ui-sref="comercialInfo" class="btn navCaracteristicas menuOcultar">Información Comercial</button>
+        <button ui-sref="contact" class="btn navCaracteristicas menuOcultar contacto"><span class="glyphicon glyphicon-envelope"></span> Fono Compras: 600 3600 030</button>
+    </div>
+</div>

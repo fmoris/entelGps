@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta content="text/html; charset=utf-8">
+        <title>Entel GPS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="shortcut icon" href="favicon.ico">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <!-- build:css(.) styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+        <link rel="stylesheet" href="bower_components/openlayers3/build/ol.css" />
+        <link rel="stylesheet" href="bower_components/ng-table/dist/ng-table.min.css" />
+        <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.css" />
+        <link rel="stylesheet" href="bower_components/ng-scrollbar/dist/ng-scrollbar.css" />
+        <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="modules/alarms/styles/alarms.css">
+        <link rel="stylesheet" href="modules/clientsRoutes/styles/clientsRoutes.css">
+        <link rel="stylesheet" href="modules/shared/styles/main.css">
+        <link rel="stylesheet" href="modules/shared/styles/navbar.css">
+        <link rel="stylesheet" href="modules/shared/styles/footer.css">
+        <link rel="stylesheet" href="modules/shared/styles/modals.css">
+        <link rel="stylesheet" href="modules/login/styles/login.css">
+        <link rel="stylesheet" href="modules/home/styles/home.css">
+        <link rel="stylesheet" href="modules/searchMovil/styles/searchMovil.css">
+        <link rel="stylesheet" href="modules/reports/styles/reports.css">
+        <link rel="stylesheet" href="modules/contact/styles/contact.css">
+        <link rel="stylesheet" href="modules/shared/styles/menu.css">
+        <link rel="stylesheet" href="modules/visualizers/styles/visualizers.css">
+        <!-- endbuild -->
+    </head>
+    <body ng-app="rsliteapp">
+        <nav role="navigation" data-ng-include="'modules/shared/views/navbar.view.html'"></nav>
+        <div class="container">
+            <div class="col-md-3" ng-if="menuLateral" data-ng-include="'modules/shared/views/menu.view.html'"></div>
+        <!--[if lte IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div data-ui-view></div>    
+        </div>
+        
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+         <script>
+             !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+             (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+             r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+             }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+             ga('create', 'UA-XXXXX-X');
+             ga('send', 'pageview');
+        </script>
+
+        <!-- build:js(.) scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-messages/angular-messages.js"></script>
+        <script src="bower_components/angular-aria/angular-aria.js"></script>
+        <script src="bower_components/angular-material/angular-material.js"></script>
+        <script src="bower_components/openlayers3/build/ol.js"></script>
+        <script src="bower_components/angular-openlayers-directive/dist/angular-openlayers-directive.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="bower_components/ngstorage/ngStorage.js"></script>
+        <script src="bower_components/ng-table/dist/ng-table.min.js"></script>
+        <script src="bower_components/angular-translate/angular-translate.js"></script>
+        <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+        <script src="bower_components/d3/d3.js"></script>
+        <script src="bower_components/nvd3/build/nv.d3.js"></script>
+        <script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+        <script src="bower_components/ng-scrollbar/dist/ng-scrollbar.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+        <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="app.js"></script>
+        <script src="config.js"></script>
+        
+        <script src="modules/shared/directives/common.directive.js"></script>
+        <script src="modules/shared/services/common.service.js"></script>
+        <script src="modules/shared/controllers/navbar.controller.js"></script>
+        <script src="modules/shared/controllers/footer.controller.js"></script>
+        <script src="modules/shared/controllers/modal.sendEmail.controller.js"></script>
+        <script src="modules/shared/controllers/menu.controller.js"></script>
+
+        <script src="modules/alarms/alarms.js"></script>
+        <script src="modules/alarms/controller/alarms.controller.js"></script>
+
+        <script src="modules/clientsRoutes/clientsRoutes.js"></script>
+        <script src="modules/clientsRoutes/controllers/clientsRoutes.controller.js"></script>
+
+        <script src="modules/login/login.js"></script>
+        <script src="modules/login/services/api.login.service.js"></script>
+        <script src="modules/login/controllers/login.controller.js"></script>
+
+        <script src="modules/home/home.js"></script>
+        <script src="modules/home/controllers/home.controller.js"></script>
+
+        <script src="modules/searchMovil/searchMovil.js"></script>
+        <script src="modules/searchMovil/controllers/searchMovil.controller.js"></script>
+        <script src="modules/searchMovil/controllers/fleetsPanel.controller.js"></script>
+        <script src="modules/searchMovil/controllers/vehiclesPanel.controller.js"></script>    
+        <script src="modules/searchMovil/controllers/geofencePanel.controller.js"></script>
+        <script src="modules/searchMovil/controllers/driversPanel.controller.js"></script>
+
+        <script src="modules/reports/reports.js"></script>
+        <script src="modules/reports/services/api.reports.service.js"></script>
+        <script src="modules/reports/controllers/reports.controller.js"></script>
+        <script src="modules/reports/controllers/weeklyPanel.controller.js"></script>
+        <script src="modules/reports/controllers/fleetPanel.controller.js"></script>
+        <script src="modules/reports/controllers/dashboardPanel.controller.js"></script>
+        <script src="modules/reports/controllers/driversRankingPanel.controller.js"></script>
+        <script src="modules/reports/controllers/edlPanel.controller.js"></script>
+        <script src="modules/reports/controllers/eventsPanel.controller.js"></script>
+        <script src="modules/reports/controllers/kilometersPanel.controller.js"></script>
+        <script src="modules/reports/controllers/patentsPanel.controller.js"></script>
+        <script src="modules/reports/controllers/rfidPanel.controller.js"></script>
+
+        <script src="modules/contact/contact.js"></script>
+        <script src="modules/contact/controllers/contact.controller.js"></script>
+
+        <script src="modules/comercialInfo/comercialInfo.js"></script>
+
+        <script src="modules/characteristics/characteristics.js"></script>
+
+        <script src="modules/visualizers/visualizers.js"></script>
+        <script src="modules/visualizers/controllers/visualizers.controller.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,84 @@
+<div class="container">
+    <form id="contactForm" class="form-horizontal">
+        <div class="form-group col-md-5">
+           <h4><span class="corchete">[ </span><strong>DATOS DE LA EMPRESA</strong></h4>
+            <div class="form-group">
+                <label class="col-sm-5 control-label"><span class="corchete">* </span>R.U.T Empresa</label>
+                <div class="col-sm-7">
+                    <input type="text" placeholder="Ej: 13275754-2" class="col-xs-12 col-sm-12 col-md-10" md-model="contact.rut" required autofocus />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-5 control-label"><span class="corchete">* </span>Razón Social de la Empresa</label>
+                <div class="col-sm-7">
+                    <input type="text" class="col-xs-12 col-sm-12 col-md-10" md-model="contact.rsocial" required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-5 control-label"><span class="corchete">* </span>Dirección Empresa</label>
+                <div class="col-sm-7">
+                    <input type="text" class="col-xs-12 col-sm-12 col-md-10" md-model="contact.direction" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-5 control-label"><span class="corchete">* </span>Ciudad</label>
+                <div class="col-sm-7">
+                    <input type="text" class="col-xs-12 col-sm-12 col-md-10" md-model="contact.city" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-5 control-label"><span class="corchete">* </span>Comuna</label>
+                <div class="col-sm-7">
+                    <input type="text" class="col-xs-12 col-sm-12 col-md-10" md-model="contact.commune" required />
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-5 col-md-offset-2">
+            <h4><span class="corchete">[ </span><strong>DATOS DE CONTACTO</strong></h4>
+            <div class="form-group">
+                <label class="col-sm-5 control-label"><span class="corchete">* </span>Nombre de Contacto</label>
+                <div class="col-sm-7">
+                    <input type="tel" class="col-xs-12 col-sm-12 col-md-10" md-model="contact.contact" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-5 control-label"><span class="corchete">* </span>Nombre de Contacto 1</label>
+                <div class="col-sm-7">
+                    <input type="tel" class="col-xs-12 col-sm-12 col-md-10" md-model="contact.contact1" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-5 control-label"><span class="corchete">* </span>Nombre de Contacto 2</label>
+                <div class="col-sm-7">
+                    <input type="tel" class="col-xs-12 col-sm-12 col-md-10" md-model="contact.contact2" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-5 control-label"><span class="corchete">* </span>Email</label>
+                <div class="col-sm-7">
+                    <input type="email" class="col-xs-12 col-sm-12 col-md-10" md-model="contact.email" required />
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-12">
+           <h4><span class="corchete">[ </span><strong>DATOS DEL SERVICIO SOLICITADO
+</strong></h4>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Número de Vehículos</label>
+                <div class="col-sm-7">
+                    <input type="number" class="col-xs-12 col-sm-12 col-md-4" md-model="contact.vehicles" required autofocus />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Informacion Adicional</label>
+                <div class="col-sm-7">
+                    <textarea class="col-xs-12 col-sm-12 col-md-12" rows="3" md-model="contact.info"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" id="contactButtons">
+            <button class="btn entel-btn">[ Borrar_</button>
+            <button class="btn entel-btn btn-submit">[ Enviar_</button>
+        </div>
+    </form>
+</div>
